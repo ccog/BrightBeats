@@ -104,7 +104,7 @@ void setup(){
 /* The only job of the loop function is to ensure that LEDs are
  * switched off after they are switched on in their respective
  * interrupts. It iterates through the status array and, upon 
- * finding an LED that is on, checks to see whether 5 milliseconds
+ * finding an LED that is on, checks to see whether DELAY_FILTER milliseconds
  * have passed since it turned on. If so, it turns off the LED on
  * the board and updates the status array accordingly.
  */
@@ -167,7 +167,7 @@ void playBack(){
         }
       }
     }
-    Serial.println(numNotes);    
+    //Serial.println(numNotes);    
   }
   delay(DELAY_FILTER);
   //Signal pattern is over
@@ -178,7 +178,7 @@ void playBack(){
   for(i = 0; i < NUM_DRUMS; i++){
     digitalWrite(ledPins[i], LOW);
   }*/
-  Serial.println("Made it!");
+  //Serial.println("Made it!");
   while(1);
 }
 
